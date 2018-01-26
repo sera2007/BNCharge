@@ -1,0 +1,8 @@
+{
+  "name": "BNCharge",
+  "app_id": "2df594ba",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
