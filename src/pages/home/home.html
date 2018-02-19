@@ -1,14 +1,68 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<!--<ion-content padding>-->
+<!--<img src='../../assets/imgs/logo_bn.png' class='logo' alt=''>-->
+<!--<button ion-button icon-only class='arrow_bottom'>-->
+<!--<ion-icon name="arrow-round-down"></ion-icon>-->
+<!--</button>-->
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<!--</ion-content>-->
+
+<ion-content class='transparent-header' [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+	<img class='logo' src='assets/imgs/logo_bn.png'/>
+	<ion-slides #slider class='content-slider' direction='vertical'>
+		<ion-slide class='swiper-no-swiping'>
+			<div padding>
+
+				<ion-slides class='text-slider' autoplay='2000'>
+					<ion-slide>
+						<h3> Really nice stuff </h3>
+					</ion-slide>
+					<ion-slide>
+						<img src='assets/img/misc/emoji.png'/>
+					</ion-slide>
+					<ion-slide>
+						<h3> Unique experiences given to you for just a couple bucks </h3>
+					</ion-slide>
+					<ion-slide>
+						<h3> Share what you love </h3>
+					</ion-slide>
+				</ion-slides>
+
+				<button ion-button icon-only class='arrow_bottom' (click)='goToButtons()'>
+					<ion-icon name='arrow-round-down'></ion-icon>
+				</button>
+			</div>
+		</ion-slide>
+		<ion-slide class='zoom swiper-no-swiping'>
+			<button ion-button clear (click)='goToStart()' class='slide-button'>
+				GO TO LOGO SCREEN
+				<ion-icon name='arrow-up'></ion-icon>
+			</button>
+			<div style='padding: 20% 32px 32px 32px'>
+				<button ion-button block (click)='goToLogin()' color='light' class='login-button'>Sign In</button>
+				<button ion-button block color='light' class='login-button'>Sign Up</button>
+			</div>
+		</ion-slide>
+		<ion-slide class='zoom swiper-no-swiping'>
+			<button ion-button clear (click)='goToButtons()' class='slide-button'>
+				GO TO BUTTONS
+				<ion-icon name='arrow-up'></ion-icon>
+			</button>
+			<div style='padding: 32px'>
+				<ion-item>
+					<ion-label floating>Username</ion-label>
+					<ion-input type='text'></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-label floating>Password</ion-label>
+					<ion-input type='password'></ion-input>
+				</ion-item>
+				<ion-item class='margin-bottom'>
+					<ion-label floating>Confirm Password</ion-label>
+					<ion-input type='password'></ion-input>
+				</ion-item>
+				<button ion-button block round (click)='signup()' color='light' class='login-button'>SIGN UP</button>
+			</div>
+		</ion-slide>
+	</ion-slides>
 </ion-content>
+
